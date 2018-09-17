@@ -67,7 +67,7 @@ export default Component.extend(/* LoggerMixin, */{
     this.addObserver('selectedProfileId', this, 'onSelectedProfileIdChanged');
     this.addObserver('selectedProfile', this, 'onSelectedProfileChange');
     Ember.run.schedule('afterRender', this, function () {
-        this.onSelectedProfileIdChanged();
+      this.onSelectedProfileIdChanged();
     });
   },
 
