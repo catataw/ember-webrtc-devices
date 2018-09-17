@@ -66,6 +66,9 @@ export default Component.extend(/* LoggerMixin, */{
     this.addObserver('showEditPart', this, 'onShowEditPartChanged');
     this.addObserver('selectedProfileId', this, 'onSelectedProfileIdChanged');
     this.addObserver('selectedProfile', this, 'onSelectedProfileChange');
+    Ember.run.schedule('afterRender', this, function () {
+        this.onSelectedProfileIdChanged();
+    });
   },
 
   /* this is needed to select correct values in select box */
@@ -88,7 +91,7 @@ export default Component.extend(/* LoggerMixin, */{
     }
     const find = this.get('profileFilteredList').find((item) => item.id === this.get('selectedProfileId'));
     if (find) {
-      this.set('selectedProfile', Object.assign({}, find));
+      this.set('selectedProfile', Object.assign({}, find.isDisabled ? this.get('defaultConfig') : find));
       this.send('setProfileAsActive');
     }
   },
