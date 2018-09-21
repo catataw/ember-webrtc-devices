@@ -24,6 +24,15 @@
         "outputDeviceLabel": "Haut-parleur {number}",
         "outputDeviceSystemDefault": "Paramètres système par défaut",
         "default": "Par défaut",
-        "windowsCommunication": "Périphérique de communication Windows"
+        "windowsCommunication": "Périphérique de communication Windows",
+        "profiles": "Profils",
+        "profileSelect": "Sélectionner un profil",
+        "useComputerSettings": "Utiliser les paramètres de l'ordinateur",
+        "newProfile": "Nouveau profil",
+        "editProfile": "Modifier le profil",
+        "removeProfile": "Supprimer le profil",
+        "profileNameLabel": "Nom du profil",
+        "saveLabel": "Sauvegarder",
+        "cancelLabel": "Annuler"
     }
 }

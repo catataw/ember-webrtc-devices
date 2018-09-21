@@ -24,6 +24,15 @@
         "outputDeviceLabel": "Głośnik {number}",
         "outputDeviceSystemDefault": "Domyślne ustawienie systemowe",
         "default": "Domyślne",
-        "windowsCommunication": "Urządzenie komunikacyjne z systemem Windows"
+        "windowsCommunication": "Urządzenie komunikacyjne z systemem Windows",
+        "profiles": "Profile",
+        "profileSelect": "Wybierz profil",
+        "useComputerSettings": "Użyj ustawień komputera",
+        "newProfile": "Nowy profil",
+        "editProfile": "Edytuj profil",
+        "removeProfile": "Usuń profil",
+        "profileNameLabel": "Nazwa profilu",
+        "saveLabel": "Zapisz",
+        "cancelLabel": "Anuluj"
     }
 }

@@ -24,6 +24,15 @@
         "outputDeviceLabel": "ลำโพง {number}",
         "outputDeviceSystemDefault": "ค่าเริ่มต้นของระบบ",
         "default": "ค่าเริ่มต้น",
-        "windowsCommunication": "อุปกรณ์สื่อสารของ Windows"
+        "windowsCommunication": "อุปกรณ์สื่อสารของ Windows",
+        "profiles": "โปรไฟล์",
+        "profileSelect": "เลือกโปรไฟล์",
+        "useComputerSettings": "ใช้การตั้งค่าคอมพิวเตอร์",
+        "newProfile": "โปรไฟล์ใหม่",
+        "editProfile": "แก้ไขโปรไฟล์",
+        "removeProfile": "ลบโปรไฟล์",
+        "profileNameLabel": "ชื่อโปรไฟล์",
+        "saveLabel": "บันทึก",
+        "cancelLabel": "ยกเลิก"
     }
 }

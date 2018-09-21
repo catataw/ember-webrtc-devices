@@ -24,6 +24,15 @@
         "outputDeviceLabel": "揚聲器 {number}",
         "outputDeviceSystemDefault": "系統預設值",
         "default": "預設",
-        "windowsCommunication": "Windows 通訊裝置"
+        "windowsCommunication": "Windows 通訊裝置",
+        "profiles": "個人資料",
+        "profileSelect": "選擇個人資料",
+        "useComputerSettings": "使用電腦設定",
+        "newProfile": "新增個人資料",
+        "editProfile": "編輯個人資料",
+        "removeProfile": "移除個人資料",
+        "profileNameLabel": "個人資料名稱",
+        "saveLabel": "儲存",
+        "cancelLabel": "取消"
     }
 }
