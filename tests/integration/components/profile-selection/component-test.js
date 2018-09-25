@@ -69,6 +69,7 @@ moduleForComponent('profile-selection', 'Integration | Component | profile selec
     this.set('audio', true);
     this.set('audioCallCapable', true);
     this.set('videoCallCapable', true);
+    this.checkBrowserPermissions = () => {};
   }
 });
 
