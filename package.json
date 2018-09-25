@@ -55,7 +55,9 @@
     "loader.js": "^4.7.0",
     "nyc": "^12.0.2",
     "pre-push": "^0.1.1",
-    "semistandard": "^9.1.0"
+    "semistandard": "^9.1.0",
+    "testem-multi-reporter": "^1.2.0",
+    "testem-time-reporter": "^2.0.0"
   },
   "keywords": [
     "ember-addon",
