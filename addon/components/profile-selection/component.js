@@ -16,7 +16,7 @@ export default Component.extend(/* LoggerMixin, */{
   savedProfiles: Ember.A(),
 
   audio: true,
-  isReadOnly: true,
+  isReadOnly: false,
   video: true,
   troubleshoot: true,
   outputDevice: true,
@@ -67,7 +67,7 @@ export default Component.extend(/* LoggerMixin, */{
         }
       }
       canBeSelected &= item.selectedResolution ? !!this.get('webrtc.resolutionList').findBy('presetId', item.selectedResolution.presetId) : true;
-      return Object.assign(item, {
+      return Object.assign({}, item, {
         isDisabled: !canBeSelected,
         selectedCamera: matchingCamera,
         selectedMicrophone: matchingMicrophone,
@@ -163,18 +163,18 @@ export default Component.extend(/* LoggerMixin, */{
       video: this.get('video')
     }).then((stream) => {
       stream.getTracks().forEach((t) => t.stop());
-    }).then(() => {
       this.get('webrtc').enumerateDevices();
-      this.set('isReadOnly', false);
+    }).catch(() => {
+      this.set('isReadOnly', true);
     });
   },
 
   saveProfile (profile) {
-    let _profile = this.get('savedProfiles').findBy('name', profile.name));
+    let _profile = this.get('savedProfiles').findBy('name', profile.name);
     if (_profile && _profile.id !== profile.id) {
       // TODO display warn
     }
-    if (!_profile && !this.get('savedProfiles').findBy('id', profile.id))) {
+    if (!_profile && !this.get('savedProfiles').findBy('id', profile.id)) {
       this.get('savedProfiles').pushObject(this.get('selectedProfile'));
     } else {
       _profile = this.get('savedProfiles').findBy('id', profile.id);
