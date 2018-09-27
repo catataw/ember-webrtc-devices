@@ -162,10 +162,14 @@ export default Component.extend(/* LoggerMixin, */{
       audio: this.get('audio'),
       video: this.get('video')
     }).then((stream) => {
-      stream.getTracks().forEach((t) => t.stop());
-      this.get('webrtc').enumerateDevices();
+      Ember.run(() => {
+        stream.getTracks().forEach((t) => t.stop());
+        this.get('webrtc').enumerateDevices();
+      });
     }).catch(() => {
-      this.set('isReadOnly', true);
+      Ember.run(() => {
+        this.set('isReadOnly', true);
+      });
     });
   },
 
