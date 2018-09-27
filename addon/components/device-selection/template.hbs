@@ -46,7 +46,7 @@
                 </div>
             {{/if}}
         {{/if}}
-        {{#if (and webrtc.microphoneList.length audio)}}
+        {{#if showInputDevicePicker}}
             <div class="entry-row">
                 <div class="entry-label">
                     <label for="{{concat elementId '-microphone-select'}}">
