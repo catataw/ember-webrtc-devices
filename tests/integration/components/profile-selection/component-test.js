@@ -3,6 +3,7 @@
 import Ember from 'ember';
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import wait from 'ember-test-helpers/wait';
 
 const tHelper = Ember.Helper.extend({
   compute: (params) => params[0]
@@ -77,14 +78,19 @@ test('it renders should display only the dropdown-menu', function (assert) {
   // Handle any actions with this.on('myAction', function(val) { ... });"
 
   this.renderDefault();
-
-  assert.equal(this.$('.dropdown-menu').length, 1);
-  assert.equal(this.$('.device-selection').length, 0);
+  return wait()
+    .then(() => {
+      assert.equal(this.$('.dropdown-menu').length, 1);
+      assert.equal(this.$('.device-selection').length, 0);
+    });
 });
 
 test('it should start with default profile selected', function (assert) {
   // Set any properties with this.set('myProperty', 'value')
   // Handle any actions with this.on('myAction', function(val) { ... });"
   this.renderDefault();
-  assert.equal(this.$('.btn-toggle div').text(), this.get('intl').t('webrtcDevices.useComputerSettings'));
+  return wait()
+    .then(() => {
+      assert.equal(this.$('.btn-toggle div').text(), this.get('intl').t('webrtcDevices.useComputerSettings'));
+    });
 });

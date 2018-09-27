@@ -29,3 +29,4 @@ testem.log
 .DS_Store
 .nyc_output
 yarn.lock
+tests/xunit.xml

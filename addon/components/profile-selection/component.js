@@ -44,16 +44,52 @@ export default Component.extend(/* LoggerMixin, */{
 
   profileFilteredList: computed('savedProfiles.[]', 'webrtc.cameraList', 'webrtc.microphoneList', 'webrtc.outputDeviceList', 'webrtc.resolutionList', function () {
     return this.get('savedProfiles').map((item) => {
-      var canBeSelected = true;
-      canBeSelected &= item.selectedCamera ? !!this.get('webrtc.cameraList').findBy('deviceId', item.selectedCamera.deviceId) : true;
+      let canBeSelected = true;
+      let matchingCamera = null;
+      let matchingOutputDevice = null;
+      let matchingMicrophone = null;
+      if (item.selectedCamera) {
+        matchingCamera = this.findMatchingDevice(this.get('webrtc.cameraList'), item.selectedCamera);
+        if (!matchingCamera) {
+          canBeSelected = false;
+        }
+      }
+      if (item.selectedMicrophone) {
+        matchingMicrophone = this.findMatchingDevice(this.get('webrtc.microphoneList'), item.selectedMicrophone);
+        if (!matchingMicrophone) {
+          canBeSelected = false;
+        }
+      }
+      if (item.selectedOutputDevice) {
+        matchingOutputDevice = this.findMatchingDevice(this.get('webrtc.outputDeviceList'), item.selectedOutputDevice);
+        if (!matchingOutputDevice) {
+          canBeSelected = false;
+        }
+      }
       canBeSelected &= item.selectedResolution ? !!this.get('webrtc.resolutionList').findBy('presetId', item.selectedResolution.presetId) : true;
-      canBeSelected &= item.selectedMicrophone ? !!this.get('webrtc.microphoneList').findBy('deviceId', item.selectedMicrophone.deviceId) : true;
-      canBeSelected &= item.selectedOutputDevice ? !!this.get('webrtc.outputDeviceList').findBy('deviceId', item.selectedOutputDevice.deviceId) : true;
-      return Object.assign({
-        isDisabled: !canBeSelected
-      }, item);
+      return Object.assign({}, item, {
+        isDisabled: !canBeSelected,
+        selectedCamera: matchingCamera,
+        selectedMicrophone: matchingMicrophone,
+        selectedOutputDevice: matchingOutputDevice
+      });
     });
   }),
+
+  findMatchingDevice: function (deviceList, device) {
+    if (!device || !deviceList || !deviceList.length) {
+      return false;
+    }
+    let find = deviceList.findBy('deviceId', device.deviceId);
+    if (find) {
+      return find;
+    }
+    const formattedName = device.label ? device.label.replace(/(.*)\s?\(.*/, '$1') : '';
+    find = deviceList.find((d) => {
+      return d.label && d.label.toLowerCase().indexOf(formattedName.toLowerCase()) === 0;
+    });
+    return find;
+  },
 
   init () {
     this._super(...arguments);
@@ -68,6 +104,7 @@ export default Component.extend(/* LoggerMixin, */{
     this.addObserver('selectedProfile', this, 'onSelectedProfileChange');
     Ember.run.schedule('afterRender', this, function () {
       this.onSelectedProfileIdChanged();
+      this.checkBrowserPermissions();
     });
   },
 
@@ -120,6 +157,39 @@ export default Component.extend(/* LoggerMixin, */{
     });
   },
 
+  checkBrowserPermissions () {
+    window.navigator.mediaDevices.getUserMedia({
+      audio: this.get('audio'),
+      video: this.get('video')
+    }).then((stream) => {
+      Ember.run(() => {
+        stream.getTracks().forEach((t) => t.stop());
+        this.get('webrtc').enumerateDevices();
+      });
+    }).catch(() => {
+      Ember.run(() => {
+        this.set('isReadOnly', true);
+      });
+    });
+  },
+
+  saveProfile (profile) {
+    let _profile = this.get('savedProfiles').findBy('name', profile.name);
+    if (_profile && _profile.id !== profile.id) {
+      // TODO display warn
+    }
+    if (!_profile && !this.get('savedProfiles').findBy('id', profile.id)) {
+      this.get('savedProfiles').pushObject(this.get('selectedProfile'));
+    } else {
+      _profile = this.get('savedProfiles').findBy('id', profile.id);
+      let index = this.get('savedProfiles').indexOf(_profile);
+      this.get('savedProfiles.[]').replace(index, 1, Object.assign({}, this.get('selectedProfile')));
+    }
+    if (typeof this.attrs.saveProfiles === 'function') {
+      this.attrs.saveProfiles(this.get('savedProfiles.[]'));
+    }
+  },
+
   showOutputDevicePicker: computed.and('outputDevice', 'audio'),
   showResolutionPicker: computed.and('webrtc.resolutionList.length', 'webrtc.cameraList.length', 'video', 'resolution'),
 
@@ -163,21 +233,7 @@ export default Component.extend(/* LoggerMixin, */{
 
       this.set('showEditPart', false);
       this.set('selectedProfileName', this.get('selectedProfile.name'));
-
-      let profile = this.get('savedProfiles').findBy('name', this.get('selectedProfile.name'));
-      if (profile && profile.id !== this.get('selectedProfile.id')) {
-        // TODO display warn
-      }
-      if (!profile && !this.get('savedProfiles').findBy('id', this.get('selectedProfile.id'))) {
-        this.get('savedProfiles').pushObject(this.get('selectedProfile'));
-      } else {
-        profile = this.get('savedProfiles').findBy('id', this.get('selectedProfile.id'));
-        let index = this.get('savedProfiles').indexOf(profile);
-        this.get('savedProfiles.[]').replace(index, 1, Object.assign({}, this.get('selectedProfile')));
-      }
-      if (typeof this.attrs.saveProfiles === 'function') {
-        this.attrs.saveProfiles(this.get('savedProfiles.[]'));
-      }
+      this.saveProfile(this.get('selectedProfile'));
       this.send('setProfileAsActive');
     },
 
