@@ -24,6 +24,15 @@
         "outputDeviceLabel": "扬声器 {number}",
         "outputDeviceSystemDefault": "系统默认值",
         "default": "默认",
-        "windowsCommunication": "Windows 通信设备"
+        "windowsCommunication": "Windows 通信设备",
+        "profiles": "个人资料",
+        "profileSelect": "选择个人资料",
+        "useComputerSettings": "使用计算机设置",
+        "newProfile": "新的个人资料",
+        "editProfile": "编辑个人资料",
+        "removeProfile": "移除个人资料",
+        "profileNameLabel": "个人资料名称",
+        "saveLabel": "保存",
+        "cancelLabel": "取消"
     }
 }

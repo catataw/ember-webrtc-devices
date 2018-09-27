@@ -24,6 +24,15 @@
         "outputDeviceLabel": "スピーカー {number}",
         "outputDeviceSystemDefault": "システムのデフォルト",
         "default": "デフォルト",
-        "windowsCommunication": "Windows 通信デバイス"
+        "windowsCommunication": "Windows 通信デバイス",
+        "profiles": "プロフィール",
+        "profileSelect": "プロフィールを選択",
+        "useComputerSettings": "PCの設定を使用",
+        "newProfile": "新しいプロフィール",
+        "editProfile": "プロフィールを編集",
+        "removeProfile": "プロフィールを削除",
+        "profileNameLabel": "プロフィール名",
+        "saveLabel": "保存",
+        "cancelLabel": "キャンセル"
     }
 }

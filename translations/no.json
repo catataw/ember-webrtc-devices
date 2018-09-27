@@ -24,6 +24,15 @@
         "outputDeviceLabel": "Høyttaler {number}",
         "outputDeviceSystemDefault": "Systemstandard",
         "default": "Standard",
-        "windowsCommunication": "Windows-kommmunikasjonsenhet"
+        "windowsCommunication": "Windows-kommmunikasjonsenhet",
+        "profiles": "Profiler",
+        "profileSelect": "Velg profil",
+        "useComputerSettings": "Bruk datamaskininnstillinger",
+        "newProfile": "Ny profil",
+        "editProfile": "Rediger profil",
+        "removeProfile": "Fjern profil",
+        "profileNameLabel": "Profilnavn",
+        "saveLabel": "Lagre",
+        "cancelLabel": "Avbryt"
     }
 }

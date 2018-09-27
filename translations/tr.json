@@ -24,6 +24,15 @@
         "outputDeviceLabel": "Hoparlör {number}",
         "outputDeviceSystemDefault": "Sistem varsayılanı",
         "default": "Varsayılan",
-        "windowsCommunication": "Windows İletişim Aygıtı"
+        "windowsCommunication": "Windows İletişim Aygıtı",
+        "profiles": "Profiller",
+        "profileSelect": "Profil seç",
+        "useComputerSettings": "Bilgisayar ayarları kullan",
+        "newProfile": "Yeni Profil",
+        "editProfile": "Profili Düzenle",
+        "removeProfile": "Profili Kaldır",
+        "profileNameLabel": "Profil Adı",
+        "saveLabel": "Kaydet",
+        "cancelLabel": "İptal"
     }
 }

@@ -24,6 +24,15 @@
         "outputDeviceLabel": "Alto-falante {number}",
         "outputDeviceSystemDefault": "Padrão do sistema",
         "default": "Padrão",
-        "windowsCommunication": "Dispositivo de comunicação Windows"
+        "windowsCommunication": "Dispositivo de comunicação Windows",
+        "profiles": "Perfis",
+        "profileSelect": "Selecionar perfil",
+        "useComputerSettings": "Usar configurações do computador",
+        "newProfile": "Novo perfil",
+        "editProfile": "Editar perfil",
+        "removeProfile": "Remover perfil",
+        "profileNameLabel": "Nome de perfil",
+        "saveLabel": "Salvar",
+        "cancelLabel": "Cancelar"
     }
 }

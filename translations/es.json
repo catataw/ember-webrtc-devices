@@ -24,6 +24,15 @@
         "outputDeviceLabel": "Altavoz {number}",
         "outputDeviceSystemDefault": "Valor predeterminado del sistema",
         "default": "Predeterminado",
-        "windowsCommunication": "Dispositivo de comunicación de Windows"
+        "windowsCommunication": "Dispositivo de comunicación de Windows",
+        "profiles": "Perfiles",
+        "profileSelect": "Seleccionar perfil",
+        "useComputerSettings": "Usar configuración de la computadora",
+        "newProfile": "Perfil nuevo",
+        "editProfile": "Editar perfil",
+        "removeProfile": "Quitar perfil",
+        "profileNameLabel": "Nombre del perfil",
+        "saveLabel": "Guardar",
+        "cancelLabel": "Cancelar"
     }
 }

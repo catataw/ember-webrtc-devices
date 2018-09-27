@@ -24,6 +24,15 @@
         "outputDeviceLabel": "Speaker {number}",
         "outputDeviceSystemDefault": "Systeemstandaard",
         "default": "Standaard",
-        "windowsCommunication": "Windows-communicatieapparaat"
+        "windowsCommunication": "Windows-communicatieapparaat",
+        "profiles": "Profielen",
+        "profileSelect": "Profiel selecteren",
+        "useComputerSettings": "Computerinstellingen gebruiken",
+        "newProfile": "Nieuw profiel",
+        "editProfile": "Profiel bewerken",
+        "removeProfile": "Profiel verwijderen",
+        "profileNameLabel": "Naam profiel",
+        "saveLabel": "Opslaan",
+        "cancelLabel": "Annuleren"
     }
 }
