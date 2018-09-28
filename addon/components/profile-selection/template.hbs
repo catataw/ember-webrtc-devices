@@ -2,6 +2,9 @@
 {{#if showEditPart}}
     <div class='device-selection'>
         {{#if webrtc.canListDevices}}
+            <svg class="svg-icon">
+              <use xlink:href="#icon-mixer"></use>
+            </svg>
             {{input placeholder=profileNameLabel value=selectedProfile.name id=(concat elementId '-profile-input') classNames="form-control"}}
             {{#if audio}}
                 <div class="entry-row">
