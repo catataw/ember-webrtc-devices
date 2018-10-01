@@ -170,10 +170,15 @@
 {{/if}}
 {{#if showTroubleshoot}}
     <div class="entry-row troubleshoot">
-        <div class="entry-values">
+        <div class="profile-footer-links">
             <button type="button" class="btn btn-link troubleshoot-link" {{action "openTroubleshoot"}}>
-                {{t "webrtcDevices.troubleshoot"}}
+                {{t "webrtcDevices.troubleshoot2"}}
             </button>
+            {{#if showVolumesLink}}
+              <button type="button" class="btn btn-link troubleshoot-link" {{action "openSoundPreferences"}}>
+                {{t "webrtcDevices.deviceVolumes"}}
+              </button>
+            {{/if}}
         </div>
     </div>
 {{/if}}

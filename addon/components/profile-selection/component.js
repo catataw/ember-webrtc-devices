@@ -34,12 +34,25 @@ export default Component.extend(/* LoggerMixin, */{
 
   webrtc: inject.service(),
   intl: inject.service(),
+  session: inject.service(),
+  settings: inject.service(),
 
   audioCallCapable: computed.reads('webrtc.audioCallCapable'),
   videoCallCapable: computed.reads('webrtc.videoCallCapable'),
 
   showTroubleshoot: computed('troubleshoot', function () {
     return this.get('troubleshoot') && typeof this.attrs.openTroubleshoot === 'function';
+  }),
+
+  showVolumesLink: computed('session.features', function () {
+    let showLink = false;
+
+    const features = this.get('session.features');
+    if (features) {
+      showLink = features['preferences.sound'];
+    }
+
+    return showLink;
   }),
 
   profileFilteredList: computed('savedProfiles.[]', 'webrtc.cameraList', 'webrtc.microphoneList', 'webrtc.outputDeviceList', 'webrtc.resolutionList', function () {
@@ -290,6 +303,10 @@ export default Component.extend(/* LoggerMixin, */{
       if (this.get('selectedResolution.presetId') !== id) {
         this.set('selectedProfile.selectedResolution', this.get('webrtc.resolutionList').findBy('presetId', id));
       }
+    },
+
+    openSoundPreferences () {
+      this.get('settings').openSoundPreference();
     }
   }
 });
