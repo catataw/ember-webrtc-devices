@@ -1,5 +1,10 @@
 <button type="button" class="btn btn-toggle" {{action (action "toggleMenu") bubbles=false}} >
-    <div>{{title}}</div>
+    <div>
+      <svg class="svg-icon">
+        <use xlink:href="#icon-mixer"></use>
+      </svg>
+      {{title}}
+    </div>
     {{#if showMenu}}
         <i class="ion-arrow-up-b"></i>
     {{else}}

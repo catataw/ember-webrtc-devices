@@ -91,6 +91,6 @@ test('it should start with default profile selected', function (assert) {
   this.renderDefault();
   return wait()
     .then(() => {
-      assert.equal(this.$('.btn-toggle div').text(), this.get('intl').t('webrtcDevices.useComputerSettings'));
+      assert.equal((this.$('.btn-toggle div').text()).replace(/^\s+|\s+$/gm, ''), this.get('intl').t('webrtcDevices.useComputerSettings'));
     });
 });
