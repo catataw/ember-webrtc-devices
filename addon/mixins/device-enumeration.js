@@ -72,8 +72,6 @@ export default Mixin.create(Ember.Evented, {
     });
     this.set('enumerationTimer', timer);
 
-    this.lookup = this.lookup || ((key) => key);
-
     if (window.navigator && window.navigator.mediaDevices &&
         window.navigator.mediaDevices.constructor.prototype.hasOwnProperty('ondevicechange')) {
       $(window.navigator.mediaDevices).on('devicechange', () => {
@@ -102,7 +100,7 @@ export default Mixin.create(Ember.Evented, {
   enumerateResolutions () {
     const resolutions = Ember.A();
     resolutions.pushObject(Ember.Object.create({
-      label: this.lookup('webrtcDevices.resolutions.low').toString(),
+      label: this.get('intl').t('webrtcDevices.resolutions.low').toString(),
       presetId: 1,
       constraints: {
         video: {
@@ -113,7 +111,7 @@ export default Mixin.create(Ember.Evented, {
     }));
 
     resolutions.pushObject(Ember.Object.create({
-      label: this.lookup('webrtcDevices.resolutions.medium').toString(),
+      label: this.get('intl').t('webrtcDevices.resolutions.medium').toString(),
       presetId: 2,
       constraints: {
         video: {
@@ -124,7 +122,7 @@ export default Mixin.create(Ember.Evented, {
     }));
 
     const hd = Ember.Object.create({
-      label: this.lookup('webrtcDevices.resolutions.high').toString(),
+      label: this.get('intl').t('webrtcDevices.resolutions.high').toString(),
       presetId: 3,
       constraints: {
         video: {
@@ -146,7 +144,7 @@ export default Mixin.create(Ember.Evented, {
     // full hd is disabled by default because very few computers actually support this
     if (this.get('fullHd')) {
       resolutions.pushObject(Ember.Object.create({
-        label: this.lookup('webrtcDevices.resolutions.fullHd').toString(),
+        label: this.get('intl').t('webrtcDevices.resolutions.fullHd').toString(),
         presetId: 4,
         constraints: {
           video: {
@@ -174,17 +172,17 @@ export default Mixin.create(Ember.Evented, {
     const outputDevices = [];
     const defaultDevice = {
       deviceId: 'default',
-      label: this.lookup('webrtcDevices.default').toString()
+      label: this.get('intl').t('webrtcDevices.default').toString()
     };
 
     const addCamera = (device, hasBrowserLabel) => {
       if (!hasBrowserLabel) {
         if (device.deviceId && device.deviceId.toLowerCase() === 'default') {
-          device.label = this.lookup('webrtcDevices.default').toString();
+          device.label = this.get('intl').t('webrtcDevices.default').toString();
         } else if (device.deviceId && device.deviceId.toLowerCase().indexOf('communication') === 0) {
-          device.label = this.lookup('webrtcDevices.windowsCommunication').toString();
+          device.label = this.get('intl').t('webrtcDevices.windowsCommunication').toString();
         }
-        device.label = device.label || this.lookup('webrtcDevices.cameraLabel', {number: ++cameraCount}).toString();
+        device.label = device.label || this.get('intl').t('webrtcDevices.cameraLabel', {number: ++cameraCount}).toString();
       }
       this.set('hasCameraPermission', this.get('hasCameraPermission') || hasBrowserLabel);
       cameras.push(Ember.Object.create(device));
@@ -192,11 +190,11 @@ export default Mixin.create(Ember.Evented, {
     const addMicrophone = (device, hasBrowserLabel) => {
       if (!hasBrowserLabel) {
         if (device.deviceId && device.deviceId.toLowerCase() === 'default') {
-          device.label = this.lookup('webrtcDevices.default').toString();
+          device.label = this.get('intl').t('webrtcDevices.default').toString();
         } else if (device.deviceId && device.deviceId.toLowerCase().indexOf('communication') === 0) {
-          device.label = this.lookup('webrtcDevices.windowsCommunication').toString();
+          device.label = this.get('intl').t('webrtcDevices.windowsCommunication').toString();
         }
-        device.label = device.label || this.lookup('webrtcDevices.microphoneLabel', {number: ++microphoneCount}).toString();
+        device.label = device.label || this.get('intl').t('webrtcDevices.microphoneLabel', {number: ++microphoneCount}).toString();
       }
       this.set('hasMicPermission', this.get('hasMicPermission') || hasBrowserLabel);
       microphones.push(Ember.Object.create(device));
@@ -206,7 +204,7 @@ export default Mixin.create(Ember.Evented, {
         return;
       }
       if (!hasLabel) {
-        device.label = this.lookup('webrtcDevices.outputDeviceLabel', {number: ++outputDeviceCount}).toString();
+        device.label = this.get('intl').t('webrtcDevices.outputDeviceLabel', {number: ++outputDeviceCount}).toString();
       }
       outputDevices.push(Ember.Object.create(device));
     };

@@ -5,7 +5,9 @@ import { module, test } from 'qunit';
 let DeviceEnumerationObject, subject;
 module('Unit | Mixin | device enumeration', {
   beforeEach () {
-    DeviceEnumerationObject = Ember.Object.extend(DeviceEnumerationMixin);
+    DeviceEnumerationObject = Ember.Object.extend(DeviceEnumerationMixin, {
+      intl: { t: s => s }
+    });
     subject = DeviceEnumerationObject.create();
   }
 });
@@ -128,7 +130,8 @@ test('updateDefaultDevices should not throw an error when called if it has been 
     const DeviceEnumerationObject2 = Ember.Object.extend(DeviceEnumerationMixin, {
       updateDefaultDevices () {
         return true;
-      }
+      },
+      intl: { t: s => s }
     });
     const subject2 = DeviceEnumerationObject2.create();
     subject2.updateDefaultDevices();
@@ -145,7 +148,9 @@ test('updateDefaultDevices should not throw an error when called if it has been 
         return true;
       }
     });
-    const DeviceEnumerationObject2 = Ember.Object.extend(SomeOtherMixin, DeviceEnumerationMixin);
+    const DeviceEnumerationObject2 = Ember.Object.extend(SomeOtherMixin, DeviceEnumerationMixin, {
+      intl: { t: s => s }
+    });
     const subject2 = DeviceEnumerationObject2.create();
     subject2.updateDefaultDevices();
   } catch (e) {
