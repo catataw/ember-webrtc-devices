@@ -46,6 +46,16 @@ const renderDefault = function () {
     `);
 };
 
+const sessionService = Ember.Service.extend({
+  features: {
+    'preferences.sound': false
+  }
+});
+
+const settingsService = Ember.Service.extend({
+  openSoundPreferences: function () {}
+});
+
 moduleForComponent('profile-selection', 'Integration | Component | profile selection', {
   integration: true,
 
@@ -54,9 +64,13 @@ moduleForComponent('profile-selection', 'Integration | Component | profile selec
     this.register('helper:and', andHelper);
     this.register('service:webrtc', webrtcService);
     this.register('service:intl', intlService);
+    this.register('service:session', sessionService);
+    this.register('service:settings', settingsService);
 
     this.inject.service('webrtc', { as: 'webrtc' });
     this.inject.service('intl', { as: 'intl' });
+    this.inject.service('session', { as: 'session' });
+    this.inject.service('settings', { as: 'settings' });
     this.renderDefault = renderDefault.bind(this);
     this.get('webrtc.resolutionList').clear();
     this.get('webrtc.cameraList').clear();

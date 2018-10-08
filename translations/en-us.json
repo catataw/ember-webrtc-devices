@@ -16,6 +16,7 @@
       "high": "HD"
     },
     "troubleshoot": "Run Diagnostics",
+    "troubleshoot2": "Diagnostics",
     "browserMediaSettings": "To configure the selected media devices, please use the media icon in your browser's address bar.",
     "noCameraDetected": "Sorry, video cannot be started because a camera was not detected.",
     "noMicrophoneDetected": "Sorry, a microphone was not detected so you can only listen.",
@@ -25,6 +26,7 @@
     "outputDeviceSystemDefault": "System default",
     "default": "Default",
     "windowsCommunication": "Windows Communication Device",
+    "deviceVolumes": "Device Volumes",
 
     "profiles": "Profiles",
     "profileSelect": "Select profile",

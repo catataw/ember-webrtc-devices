@@ -42,6 +42,17 @@ export default Component.extend(/* LoggerMixin, */{
     return this.get('troubleshoot') && typeof this.attrs.openTroubleshoot === 'function';
   }),
 
+  showVolumesLink: computed('webrtc.session.features', function () {
+    let showLink = false;
+
+    const features = this.get('webrtc.session.features');
+    if (features) {
+      showLink = features['preferences.sound'];
+    }
+
+    return showLink;
+  }),
+
   profileFilteredList: computed('savedProfiles.[]', 'webrtc.cameraList', 'webrtc.microphoneList', 'webrtc.outputDeviceList', 'webrtc.resolutionList', function () {
     return this.get('savedProfiles').map((item) => {
       let canBeSelected = true;
@@ -290,6 +301,10 @@ export default Component.extend(/* LoggerMixin, */{
       if (this.get('selectedResolution.presetId') !== id) {
         this.set('selectedProfile.selectedResolution', this.get('webrtc.resolutionList').findBy('presetId', id));
       }
+    },
+
+    openSoundPreferences () {
+      this.get('webrtc.settings').openSoundPreference();
     }
   }
 });
