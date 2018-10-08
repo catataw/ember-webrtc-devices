@@ -34,8 +34,6 @@ export default Component.extend(/* LoggerMixin, */{
 
   webrtc: inject.service(),
   intl: inject.service(),
-  session: inject.service(),
-  settings: inject.service(),
 
   audioCallCapable: computed.reads('webrtc.audioCallCapable'),
   videoCallCapable: computed.reads('webrtc.videoCallCapable'),
@@ -44,10 +42,10 @@ export default Component.extend(/* LoggerMixin, */{
     return this.get('troubleshoot') && typeof this.attrs.openTroubleshoot === 'function';
   }),
 
-  showVolumesLink: computed('session.features', function () {
+  showVolumesLink: computed('webrtc.session.features', function () {
     let showLink = false;
 
-    const features = this.get('session.features');
+    const features = this.get('webrtc.session.features');
     if (features) {
       showLink = features['preferences.sound'];
     }
@@ -306,7 +304,7 @@ export default Component.extend(/* LoggerMixin, */{
     },
 
     openSoundPreferences () {
-      this.get('settings').openSoundPreference();
+      this.get('webrtc.settings').openSoundPreference();
     }
   }
 });
