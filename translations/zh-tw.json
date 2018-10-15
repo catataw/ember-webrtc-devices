@@ -16,6 +16,7 @@
             "high": "HD"
         },
         "troubleshoot": "執行診斷",
+        "troubleshoot2": "診斷",
         "browserMediaSettings": "要設定選定媒體裝置，請使用瀏覽器位址欄上的媒體圖示。",
         "noCameraDetected": "抱歉，無法啟動視訊，因為未偵測到攝影機。",
         "noMicrophoneDetected": "抱歉，由於未偵測到麥克風，因此您只能聽，無法說。",
@@ -25,6 +26,7 @@
         "outputDeviceSystemDefault": "系統預設值",
         "default": "預設",
         "windowsCommunication": "Windows 通訊裝置",
+        "deviceVolumes": "裝置音量",
         "profiles": "個人資料",
         "profileSelect": "選擇個人資料",
         "useComputerSettings": "使用電腦設定",

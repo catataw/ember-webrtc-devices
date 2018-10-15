@@ -16,6 +16,7 @@
             "high": "Alta"
         },
         "troubleshoot": "Esegui diagnostiche",
+        "troubleshoot2": "Diagnostica",
         "browserMediaSettings": "Per configurare i dispositivi multimediali selezionati, usare la relativa icona nella barra dell'indirizzo del browser.",
         "noCameraDetected": "Impossibile avviare il video. Non è stata rilevata una videocamera.",
         "noMicrophoneDetected": "Impossibile avviare l'audio. Non è stato rilevato un microfono",
@@ -25,6 +26,7 @@
         "outputDeviceSystemDefault": "Valori predefiniti del sistema",
         "default": "Predefinito",
         "windowsCommunication": "Dispositivo di comunicazione Windows",
+        "deviceVolumes": "Volumi dispositivi",
         "profiles": "Profili",
         "profileSelect": "Seleziona profilo",
         "useComputerSettings": "Usa impostazioni Computer",

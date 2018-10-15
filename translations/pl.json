@@ -16,6 +16,7 @@
             "high": "HD"
         },
         "troubleshoot": "Uruchom diagnostykę",
+        "troubleshoot2": "Diagnostyka",
         "browserMediaSettings": "Aby skonfigurować wybrane urządzenia multimedialne, należy użyć ikony mediów w pasku adresu przeglądarki.",
         "noCameraDetected": "Niestety, nie można zacząć sesji wideo, ponieważ nie wykryto kamery.",
         "noMicrophoneDetected": "Nie wykryto mikrofonu, możesz tylko słuchać.",
@@ -25,6 +26,7 @@
         "outputDeviceSystemDefault": "Domyślne ustawienie systemowe",
         "default": "Domyślne",
         "windowsCommunication": "Urządzenie komunikacyjne z systemem Windows",
+        "deviceVolumes": "Głośność urządzeń",
         "profiles": "Profile",
         "profileSelect": "Wybierz profil",
         "useComputerSettings": "Użyj ustawień komputera",

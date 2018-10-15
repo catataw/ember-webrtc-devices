@@ -16,6 +16,7 @@
             "high": "HD"
         },
         "troubleshoot": "Kjør diagnose",
+        "troubleshoot2": "Diagnostikk",
         "browserMediaSettings": "Bruk medieikonet i nettleserens adresselinje til å konfigurere de valgte medieenhetene.",
         "noCameraDetected": "Beklager, video kan ikke startes fordi det ikke ble påvist noe kamera.",
         "noMicrophoneDetected": "Beklager, men siden ingen mikrofon ble påvist, kan du bare lytte.",
@@ -25,6 +26,7 @@
         "outputDeviceSystemDefault": "Systemstandard",
         "default": "Standard",
         "windowsCommunication": "Windows-kommmunikasjonsenhet",
+        "deviceVolumes": "Enhetsvolum",
         "profiles": "Profiler",
         "profileSelect": "Velg profil",
         "useComputerSettings": "Bruk datamaskininnstillinger",

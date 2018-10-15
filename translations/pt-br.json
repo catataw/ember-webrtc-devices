@@ -16,6 +16,7 @@
             "high": "HD"
         },
         "troubleshoot": "Executar diagnóstico",
+        "troubleshoot2": "Diagnósticos",
         "browserMediaSettings": "Para configurar os dispositivos de mídia selecionados, use o ícone de mídia na barra de endereços de seu navegador.",
         "noCameraDetected": "O vídeo não pôde ser iniciado porque nenhuma câmera foi detectada.",
         "noMicrophoneDetected": "Nenhum microfone foi detectado, então você só poderá ouvir.",
@@ -25,6 +26,7 @@
         "outputDeviceSystemDefault": "Padrão do sistema",
         "default": "Padrão",
         "windowsCommunication": "Dispositivo de comunicação Windows",
+        "deviceVolumes": "Volumes do dispositivo",
         "profiles": "Perfis",
         "profileSelect": "Selecionar perfil",
         "useComputerSettings": "Usar configurações do computador",
