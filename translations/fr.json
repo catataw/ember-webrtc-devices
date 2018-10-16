@@ -16,6 +16,7 @@
             "high": "HD"
         },
         "troubleshoot": "Exécuter les diagnostics",
+        "troubleshoot2": "Diagnostics",
         "browserMediaSettings": "Pour configurer les appareils multimédia sélectionnés, utilisez l'icône multimédia de la barre d'adresse de votre navigateur.",
         "noCameraDetected": "Désolé ! La vidéo ne peut pas commencer, car aucune caméra n'est détectée.",
         "noMicrophoneDetected": "Désolé, mais aucun microphone n'a été détecté. Vous ne pourrez qu'écouter.",
@@ -25,6 +26,7 @@
         "outputDeviceSystemDefault": "Paramètres système par défaut",
         "default": "Par défaut",
         "windowsCommunication": "Périphérique de communication Windows",
+        "deviceVolumes": "Volumes d'appareils",
         "profiles": "Profils",
         "profileSelect": "Sélectionner un profil",
         "useComputerSettings": "Utiliser les paramètres de l'ordinateur",

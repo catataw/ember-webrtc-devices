@@ -16,6 +16,7 @@
             "high": "HD"
         },
         "troubleshoot": "진단 실행",
+        "troubleshoot2": "진단",
         "browserMediaSettings": "선택한 미디어 장치를 구성하려면 브라우저의 주소 표시줄에 있는 미디어 아이콘을 사용하십시오.",
         "noCameraDetected": "죄송합니다. 카메라가 감지되지 않아서 비디오를 시작할 수 없습니다.",
         "noMicrophoneDetected": "죄송합니다. 마이크를 감지할 수 없으므로 듣는 것만 가능합니다.",
@@ -25,6 +26,7 @@
         "outputDeviceSystemDefault": "시스템 기본값",
         "default": "기본값",
         "windowsCommunication": "Windows 커뮤니케이션 장치",
+        "deviceVolumes": "장치 볼륨",
         "profiles": "프로필",
         "profileSelect": "프로필 선택",
         "useComputerSettings": "컴퓨터 설정 사용",

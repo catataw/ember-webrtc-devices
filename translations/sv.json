@@ -16,6 +16,7 @@
             "high": "HD"
         },
         "troubleshoot": "Kör diagnostik",
+        "troubleshoot2": "Diagnostisk",
         "browserMediaSettings": "Om du vill konfigurera valda medieenheter klickar du på medieikonen i webbläsarens adressfält.",
         "noCameraDetected": "Videofunktionen kan tyvärr inte aktiveras eftersom det inte gick att detektera någon kamera.",
         "noMicrophoneDetected": "Ingen mikrofon hittades, så du kan tyvärr endast lyssna.",
@@ -25,6 +26,7 @@
         "outputDeviceSystemDefault": "Systemstandard",
         "default": "Standard",
         "windowsCommunication": "Kommunikationsenhet för Windows",
+        "deviceVolumes": "Enhetsvolymer",
         "profiles": "Profiler",
         "profileSelect": "Välj profil",
         "useComputerSettings": "Använd datorinställningar",

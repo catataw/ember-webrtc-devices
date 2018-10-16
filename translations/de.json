@@ -16,6 +16,7 @@
             "high": "HD"
         },
         "troubleshoot": "Diagnose ausführen",
+        "troubleshoot2": "Diagnosen",
         "browserMediaSettings": "Um die ausgewählten Mediengeräte zu konfigurieren, verwenden Sie das Mediensymbol in der Adressleiste Ihres Browsers.",
         "noCameraDetected": "Video kann leider nicht gestartet werden, da keine Kamera erkannt wurde.",
         "noMicrophoneDetected": "Leider wurde kein Mikrofon erkannt, daher können Sie nur zuhören.",
@@ -25,6 +26,7 @@
         "outputDeviceSystemDefault": "Systemstandard",
         "default": "Standard",
         "windowsCommunication": "Windows-Kommunikationsgerät",
+        "deviceVolumes": "Gerätelautstärken",
         "profiles": "Profile",
         "profileSelect": "Profil auswählen",
         "useComputerSettings": "Computereinstellungen verwenden",

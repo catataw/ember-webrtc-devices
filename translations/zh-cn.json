@@ -16,6 +16,7 @@
             "high": "HD"
         },
         "troubleshoot": "运行诊断",
+        "troubleshoot2": "诊断",
         "browserMediaSettings": "要配置选定媒体设备，请使用浏览器地址栏上的媒体图标。",
         "noCameraDetected": "对不起，无法启动视频，因为未检测到摄像头。",
         "noMicrophoneDetected": "对不起，由于未检测到麦克风，因此您只可以听，不可以说。",
@@ -25,6 +26,7 @@
         "outputDeviceSystemDefault": "系统默认值",
         "default": "默认",
         "windowsCommunication": "Windows 通信设备",
+        "deviceVolumes": "设备音量",
         "profiles": "个人资料",
         "profileSelect": "选择个人资料",
         "useComputerSettings": "使用计算机设置",
