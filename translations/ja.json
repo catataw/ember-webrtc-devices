@@ -16,6 +16,7 @@
             "high": "HD"
         },
         "troubleshoot": "診断の実行",
+        "troubleshoot2": "診断",
         "browserMediaSettings": "選択されたメディア デバイスを設定するには、ブラウザーのアドレス バーでメディア アイコンを使用してください。",
         "noCameraDetected": "申し訳ありません、カメラが認識されないためビデオを開始できません。",
         "noMicrophoneDetected": "申し訳ありませんが、マイクが検出されなかったので、聴き取りのみ可能です。",
@@ -25,6 +26,7 @@
         "outputDeviceSystemDefault": "システムのデフォルト",
         "default": "デフォルト",
         "windowsCommunication": "Windows 通信デバイス",
+        "deviceVolumes": "デバイス ボリューム",
         "profiles": "プロフィール",
         "profileSelect": "プロフィールを選択",
         "useComputerSettings": "PCの設定を使用",

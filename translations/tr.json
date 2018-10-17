@@ -16,6 +16,7 @@
             "high": "HD"
         },
         "troubleshoot": "Tanılamayı Çalıştır",
+        "troubleshoot2": "Tanılama",
         "browserMediaSettings": "Seçili medya cihazlarını yapılandırmak için lütfen tarayıcınızın adres çubuğundaki medya simgesini kullanın.",
         "noCameraDetected": "Kamera algılanmadığından video başlatılamıyor.",
         "noMicrophoneDetected": "Mikrofon algılanamadığı için sadece dinleyebilirsiniz.",
@@ -25,6 +26,7 @@
         "outputDeviceSystemDefault": "Sistem varsayılanı",
         "default": "Varsayılan",
         "windowsCommunication": "Windows İletişim Aygıtı",
+        "deviceVolumes": "Cihaz Sesleri",
         "profiles": "Profiller",
         "profileSelect": "Profil seç",
         "useComputerSettings": "Bilgisayar ayarları kullan",

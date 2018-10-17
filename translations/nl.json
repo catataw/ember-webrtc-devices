@@ -16,6 +16,7 @@
             "high": "HD"
         },
         "troubleshoot": "Diagnose uitvoeren",
+        "troubleshoot2": "Diagnostische gegevens",
         "browserMediaSettings": "Gebruik het mediumpictogram in de adresbalk van uw browser om de geselecteerde mediumapparaten te configureren.",
         "noCameraDetected": "De video kan niet worden gestart omdat er geen camera is gedetecteerd.",
         "noMicrophoneDetected": "Er is geen microfoon gevonden. U kunt daarom alleen luisteren.",
@@ -25,6 +26,7 @@
         "outputDeviceSystemDefault": "Systeemstandaard",
         "default": "Standaard",
         "windowsCommunication": "Windows-communicatieapparaat",
+        "deviceVolumes": "Apparaatvolumes",
         "profiles": "Profielen",
         "profileSelect": "Profiel selecteren",
         "useComputerSettings": "Computerinstellingen gebruiken",

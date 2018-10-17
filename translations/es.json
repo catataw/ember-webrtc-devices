@@ -16,6 +16,7 @@
             "high": "Alta definición"
         },
         "troubleshoot": "Ejecutar diagnóstico",
+        "troubleshoot2": "Diagnósticos",
         "browserMediaSettings": "Para configurar los dispositivos multimedia seleccionados, use el icono de multimedia en la barra de direcciones de su navegador.",
         "noCameraDetected": "Lamentamos el inconveniente, pero no se puede iniciar el video porque no se ha detectado una cámara.",
         "noMicrophoneDetected": "Lamentablemente, no se detectó micrófono. Podrá escuchar únicamente.",
@@ -25,6 +26,7 @@
         "outputDeviceSystemDefault": "Valor predeterminado del sistema",
         "default": "Predeterminado",
         "windowsCommunication": "Dispositivo de comunicación de Windows",
+        "deviceVolumes": "Volúmenes de equipos",
         "profiles": "Perfiles",
         "profileSelect": "Seleccionar perfil",
         "useComputerSettings": "Usar configuración de la computadora",
